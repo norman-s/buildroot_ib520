@@ -1,6 +1,6 @@
 # Actions-Buildroot
 #first time 04.22
-
+#2，0422
 Build Buildroot using GitHub Actions
 
 ## Usage
