@@ -57,8 +57,7 @@ jobs:
 
     - name: Load custom configuration
       run: |
-       	mkdir buildroot/board/ib520
-        mv ib520/* buildroot/board/ib520/
+        mv ib520 buildroot/board/
        	mv ib520_i386_bios_defconfig buildroot/configs/
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE buildroot/.config
         cd buildroot
