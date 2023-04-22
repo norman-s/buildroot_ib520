@@ -18,6 +18,8 @@ env:
   REPO_URL: https://github.com/buildroot/buildroot
   REPO_BRANCH: 2022.02.x
   CONFIG_FILE: .config
+  CONFIG_DIR: ib520
+  CONFIG_DEF: ib520_i386_bios_defconfig 
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -57,8 +59,8 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        mv ib520 buildroot/board/
-       	mv ib520_i386_bios_defconfig buildroot/configs/
+        mv $CONFIG_DIR buildroot/board/
+        mv $CONFIG_DEF buildroot/configs/ 
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE buildroot/.config
         cd buildroot
 
