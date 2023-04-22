@@ -1,4 +1,4 @@
-name: Build Buildroot
+name: Build ib520
 
 on:
   repository_dispatch:
