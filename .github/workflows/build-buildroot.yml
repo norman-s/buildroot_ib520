@@ -21,6 +21,7 @@ env:
   CONFIG_FILE: .config
   CONFIG_FILE1: ib520/linux_ib520.config
   CONFIG_FILE2: ib520/isolinux.cfg
+  CONFIG_FILE3: busybox.config
   CONFIG_DEF: ib520_i386_bios_defconfig 
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
@@ -64,6 +65,7 @@ jobs:
         mkdir buildroot/board/ib520
         mv $CONFIG_FILE1 buildroot/board/ib520/
         mv $CONFIG_FILE2 buildroot/board/ib520/
+        mv $CONFIG_FILE3 package/busybox/busybox.config
         mv $CONFIG_DEF buildroot/configs/ 
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE buildroot/.config
         cd buildroot
